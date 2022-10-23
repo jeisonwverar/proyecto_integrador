@@ -1,0 +1,59 @@
+@mixin bgc {
+    background-color: aliceblue;
+        border-radius: 2px ;
+        box-shadow: 0 0 2px silver;
+}
+.hamburger-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(179, 44, 55);
+    width: 50px;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+
+    &:hover{
+        background-color: hsl(179, 49%, 46%);
+    }
+    &__top-bread{
+        display:block;
+        position: absolute;
+        width: 80%;
+        height: .3em;
+        @include bgc();
+        left: 10%;
+        top: 20%;
+    }
+    
+    &__meat{
+        display:block;
+        position: absolute;
+        width: 80%;
+        height: .3em;
+        @include bgc();
+
+        
+        transform: translateY(-50%);
+        left: 10%;
+        top: 50%;
+    }
+    
+    &__bottom-bread{
+        display:block;
+        position: absolute;
+        width: 80%;
+        height: .3em;
+        @include bgc();
+        left: 10%;
+        bottom: 20%;
+    }
+    
+}
+
+.main-nav-toggle:checked ~ .main-header .hamburger-button{
+    background-color: orange;
+  &:hover{
+    background-color: orangered;
+  }  
+}
