@@ -556,65 +556,102 @@ body {
 }
 
 .main-footer {
+  padding-top: 1em;
   background-image: linear-gradient(rgb(39, 133, 131), rgb(44, 78, 78));
   color: aliceblue;
   font-family: "Roboto", sans-serif;
 }
 .main-footer__newsletter {
-  border: 2px solid salmon;
-  text-align: center;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5em;
   flex-direction: column;
+  border: 2px solid red;
+  align-items: center;
+  gap: 0.2em;
+  padding: 0.4em;
 }
-.main-footer__newsletter-title {
-  width: 100%;
-  margin-bottom: 0.2em;
-  font-size: 1rem;
-  letter-spacing: 1px;
+.main-footer__newsletter-form {
+  margin: 1em;
 }
-.main-footer__newsletter-paragraph {
-  width: 100%;
-  margin-bottom: 0.2em;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
+.main-footer__newsletter-form > .footer__input {
+  padding: 0.2em;
+  padding: 3px;
+  outline: none;
 }
-@media (min-width: 320px) {
-  .main-footer__newsletter {
-    line-height: 4em;
-  }
+.main-footer__newsletter-form > .footer__cta {
+  padding: 0.4em;
+  border-radius: 2px;
+  color: aliceblue;
+  font-weight: 600;
+  background-color: rgba(68, 65, 240, 0.836);
+  box-shadow: 0 0 1px 1px silver;
+  border: none;
+}
+.main-footer__newsletter-form > .footer__cta:hover {
+  background-color: rgba(61, 59, 153, 0.836);
 }
 .main-footer__content {
   border: 2px solid red;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 2em;
+  overflow: hidden;
 }
 .main-footer__content-logo {
   border: 2px solid red;
   order: 1;
-  width: 4em;
-}
-.main-footer__content-email {
-  order: 2;
 }
 .main-footer__content-phone {
-  border: solid salmon 2px;
-  order: 3;
+  margin: 0.2em 4em;
 }
-.main-footer__social {
+.main-footer__content-phone::after {
+  content: "Phone: +57 319 383 8656";
+}
+@media (min-width: 780px) {
+  .main-footer__content-phone {
+    order: 1;
+    margin: 0;
+    padding-left: 2em;
+  }
+}
+.main-footer__content-email {
+  margin: 0.4em 4.4em;
+}
+.main-footer__content-email::after {
+  content: "example@huddle.com";
+}
+@media (min-width: 780px) {
+  .main-footer__content-email {
+    order: 1;
+    margin: 0;
+  }
+}
+.main-footer__content-social {
   display: flex;
-  width: 100%;
-  order: 5;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-bottom: 2em;
+  justify-content: center;
+  gap: 4em;
+  padding: 0.2em;
 }
-.main-footer__social .footer__icon {
-  width: 2em;
+.main-footer__content-social .footer__icon {
+  transform: scale(1.4);
 }
-
+@media (min-width: 780px) {
+  .main-footer__content-social {
+    flex-direction: column;
+  }
+}
+@media (min-width: 780px) {
+  .main-footer__content {
+    flex-direction: row;
+    gap: 2em;
+  }
+}
+.main-footer__copy {
+  border: 2px solid red;
+  text-align: center;
+  padding: 1em;
+  font-weight: 300;
+  font-size: 0.8em;
+}
 .card {
   /* border 5px solid green; */
   max-width: 20em;
