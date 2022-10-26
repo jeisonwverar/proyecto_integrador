@@ -1,29 +1,25 @@
 @mixin bgc {
-    background-color: aliceblue;
-        border-radius: 2px ;
-        box-shadow: 0 0 2px silver;
+        background-color: hsl(208, 100%, 97%);
+        box-shadow: 0 0 2px hsl(1, 1%, 75%);
 }
 .hamburger-button{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: hsl(179, 44, 55);
     width: 50px;
     height: 100%;
     cursor: pointer;
     position: relative;
 
-    &:hover{
-        background-color: hsl(179, 49%, 46%);
-    }
+    
     &__top-bread{
         display:block;
         position: absolute;
         width: 80%;
         height: .3em;
-        @include bgc();
         left: 10%;
         top: 20%;
+        @include bgc();
     }
     
     &__meat{
@@ -44,9 +40,9 @@
         position: absolute;
         width: 80%;
         height: .3em;
-        @include bgc();
         left: 10%;
         bottom: 20%;
+        @include bgc();
     }
     
 }

@@ -1,11 +1,11 @@
-$main-first:hsl(179, 44, 55);
-$main-gradient:rgb(39, 133, 131);
+$main-first:hsl(179, 44%, 55%);
+$main-gradient:hsl(179, 55%, 34%);
 $main-second:hsl(179, 49%, 46%);
-$shadow:hsl(213, 30, 32);
+$shadow:hsl(213, 30%, 32%);
 
 
 .main-header{
-    background-image: linear-gradient(rgb(39, 133, 131),hsl(179, 44, 55)); 
+    background-image: linear-gradient(hsl(179, 55%, 34%),hsl(179, 44%, 55%)); 
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -45,17 +45,13 @@ $shadow:hsl(213, 30, 32);
     }
     
     &__search-form-container{
-        border: thin solid rgba(38, 219, 165, 0.76);
+        border: thin solid hsla(162, 72%, 50%, 0.76);
         background-color:inherit;
         display: flex;
         justify-content: center;
         align-items: center;
         order:2;
     
-        
-        @media (min-width:320px){
-            /* padding: 1em; */
-        }
         @media (min-width:780px){
             order: 2;
             flex-grow: 2;

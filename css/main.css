@@ -325,34 +325,28 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: hsl(179deg, 44%, 55%);
   width: 50px;
   height: 100%;
   cursor: pointer;
   position: relative;
-}
-.hamburger-button:hover {
-  background-color: hsl(179deg, 49%, 46%);
 }
 .hamburger-button__top-bread {
   display: block;
   position: absolute;
   width: 80%;
   height: 0.3em;
-  background-color: aliceblue;
-  border-radius: 2px;
-  box-shadow: 0 0 2px silver;
   left: 10%;
   top: 20%;
+  background-color: hsl(208deg, 100%, 97%);
+  box-shadow: 0 0 2px hsl(1deg, 1%, 75%);
 }
 .hamburger-button__meat {
   display: block;
   position: absolute;
   width: 80%;
   height: 0.3em;
-  background-color: aliceblue;
-  border-radius: 2px;
-  box-shadow: 0 0 2px silver;
+  background-color: hsl(208deg, 100%, 97%);
+  box-shadow: 0 0 2px hsl(1deg, 1%, 75%);
   transform: translateY(-50%);
   left: 10%;
   top: 50%;
@@ -362,11 +356,10 @@ body {
   position: absolute;
   width: 80%;
   height: 0.3em;
-  background-color: aliceblue;
-  border-radius: 2px;
-  box-shadow: 0 0 2px silver;
   left: 10%;
   bottom: 20%;
+  background-color: hsl(208deg, 100%, 97%);
+  box-shadow: 0 0 2px hsl(1deg, 1%, 75%);
 }
 
 .main-nav-toggle:checked ~ .main-header .hamburger-button {
@@ -377,7 +370,7 @@ body {
 }
 
 .main-header {
-  background-image: linear-gradient(rgb(39, 133, 131), hsl(179deg, 44%, 55%));
+  background-image: linear-gradient(hsl(179deg, 55%, 34%), hsl(179deg, 44%, 55%));
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -412,17 +405,12 @@ body {
   }
 }
 .main-header__search-form-container {
-  border: thin solid rgba(38, 219, 165, 0.76);
+  border: thin solid hsla(162deg, 72%, 50%, 0.76);
   background-color: inherit;
   display: flex;
   justify-content: center;
   align-items: center;
   order: 2;
-}
-@media (min-width: 320px) {
-  .main-header__search-form-container {
-    /* padding: 1em; */
-  }
 }
 @media (min-width: 780px) {
   .main-header__search-form-container {
@@ -652,6 +640,110 @@ body {
   font-weight: 300;
   font-size: 0.8em;
 }
+.contact {
+  background-image: linear-gradient(hsla(0deg, 0%, 75%, 0.171), hsla(187deg, 30%, 28%, 0.664)), url("/img/space.png");
+  background-blend-mode: color-dodge;
+  box-shadow: 0px 0px 0.8em black;
+  background-repeat: no-repeat;
+  padding: 4em;
+  display: flex;
+  border-radius: 0.2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact__section-one-fieldset {
+  text-align: center;
+  border: solid 2px black;
+  margin: 0.8em;
+}
+.contact__section-one-legend {
+  background-color: hsla(199deg, 100%, 75%, 0.61);
+  padding: 0.2em;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: aliceblue;
+}
+.contact__section-one-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.contact__section-one-div input {
+  text-align: center;
+  font-weight: 700;
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid hsl(0deg, 0%, 29%);
+  color: black;
+  padding: 2px 4px;
+}
+.contact__section-one-div textarea {
+  opacity: 0.4;
+  padding: 4px;
+  color: black;
+  font-weight: 600;
+}
+.contact__section-two-fieldset {
+  text-align: center;
+  padding: 2em;
+  border: solid 2px black;
+  margin: 0.2em;
+}
+.contact__section-two-legend {
+  background-color: hsla(199deg, 100%, 75%, 0.61);
+  padding: 0.2em;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #cbdeee;
+  border-radius: 0.2em;
+}
+.contact__section-two-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.contact__section-two-div input {
+  text-align: center;
+  font-weight: 700;
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid hsl(0deg, 2%, 74%);
+  color: hsl(208deg, 43%, 61%);
+  padding: 2px 4px;
+}
+.contact__section-two-div label {
+  color: hsl(0deg, 0%, 100%);
+}
+.contact__section-three {
+  padding: 4px;
+  color: hsl(39deg, 77%, 83%);
+}
+.contact__section-three div {
+  margin-bottom: 0.4em;
+}
+.contact__section-three-button input {
+  padding: 0.2em;
+  background-color: hsl(231deg, 100%, 75%);
+  color: azure;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+}
+.contact__section-three-button input:hover {
+  background-color: hsl(231deg, 85%, 56%);
+}
+
 .card {
   /* border 5px solid green; */
   max-width: 20em;
@@ -780,6 +872,20 @@ body {
   gap: 1em;
   justify-content: center;
   align-items: stretch;
+}
+
+.main-contact {
+  border: 4px solid red;
+  padding: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+  align-items: stretch;
+  margin-bottom: 2em;
+}
+.main-contact-title {
+  border: 4px solid red;
 }
 
 /*# sourceMappingURL=main.css.map */
