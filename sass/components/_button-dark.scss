@@ -1,0 +1,29 @@
+.main-header__theme{
+    position: absolute;
+    top:2vh;
+    right: 2vw;
+    width: 1em;
+    height: 1em;
+    background-color: aqua;
+    border-radius: 30%;
+
+    &-button{
+        background-color: bisque;
+        width: 80%;
+        height: 80%;
+    }
+
+    &-button:active {
+        background-color: black;
+    }
+
+    &-button:hover{
+        background-color: azure;
+    }
+}
+
+
+  
+  
+  
+ 

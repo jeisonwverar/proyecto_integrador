@@ -397,13 +397,18 @@ body {
   padding-top: 3em;
   object-fit: contain;
 }
+@media (min-width: 320px) {
+  .main-header__logo-container {
+    flex-basis: 100%;
+  }
+}
 @media (min-width: 780px) {
   .main-header__logo-container {
     background-size: 8em;
     padding: 2em;
   }
 }
-@media (min-width: 900px) {
+@media (min-width: 920px) {
   .main-header__logo-container {
     flex-grow: 1;
     background-size: 9em;
@@ -499,16 +504,6 @@ body {
     order: 1;
     flex-grow: 1;
   }
-}
-.main-header__theme {
-  position: absolute;
-  top: 2px;
-  right: 2px;
-  width: 1.8em;
-  height: 1.8em;
-  border-radius: 50%;
-  background-color: inherit;
-  border: thin solid rgba(46, 49, 219, 0.959);
 }
 
 .main-nav-toggle {
@@ -759,6 +754,92 @@ body {
 }
 .contact__section-three-button input:hover {
   background-color: hsl(231deg, 85%, 56%);
+}
+
+.form-alta {
+  width: 80%;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  margin: 2em;
+  display: flex;
+  flex-direction: column;
+  padding: 0.8em;
+}
+.form-alta__section-one {
+  border: rgba(232, 8, 8, 0.311) solid 4px;
+  margin-bottom: 1em;
+  padding: 1.5em;
+}
+.form-alta__section-one div {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  text-align: center;
+}
+.form-alta__section-one--title {
+  text-align: center;
+  margin-bottom: 0.2em;
+  color: rgb(63, 98, 239);
+}
+.form-alta__section-one--name input, .form-alta__section-one--brand input {
+  background: inherit;
+  outline: 0;
+  border: none;
+  border-bottom: 1px solid black;
+  text-align: center;
+  padding: 0.2em;
+  margin-bottom: 0.2em;
+  font-weight: 600;
+}
+.form-alta__section-one--name label, .form-alta__section-one--brand label, .form-alta__section-one--age label, .form-alta__section-one--img label {
+  text-align: center;
+  padding: 0.2em;
+  margin-bottom: 0.2em;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.form-alta__section-one--age select {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  background: inherit;
+}
+.form-alta__section-one--img input {
+  border: solid red 2px;
+}
+.form-alta__section-two {
+  border: rgba(8, 228, 232, 0.311) solid 4px;
+  margin-bottom: 1em;
+  padding: 1.5em;
+}
+.form-alta__section-two div {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  text-align: center;
+}
+
+.main-header__theme {
+  position: absolute;
+  top: 2vh;
+  right: 2vw;
+  width: 1em;
+  height: 1em;
+  background-color: aqua;
+  border-radius: 30%;
+}
+.main-header__theme-button {
+  background-color: bisque;
+  width: 80%;
+  height: 80%;
+}
+.main-header__theme-button:active {
+  background-color: black;
+}
+.main-header__theme-button:hover {
+  background-color: azure;
 }
 
 .card {
@@ -1026,6 +1107,18 @@ body {
   grid-area: "para";
   padding: 0.2em;
   align-self: center;
+}
+
+.form-registration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-image: url("/img/box.jpg");
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=main.css.map */

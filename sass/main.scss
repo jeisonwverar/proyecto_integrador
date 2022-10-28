@@ -14,11 +14,14 @@
 @use '../sass/layout/main-nav';
 @use '../sass/layout/footer';
 @use '../sass/layout/form-contact';
+@use '../sass/layout/form-alta';
 //components
+@use '../sass/components/button-dark';
 @use '../sass/components/card';
 @use '../sass/components/slider';
 //pages
 @use '../sass/pages/index';
 @use '../sass/pages/contact';
 @use '../sass/pages/about-us';
+@use '../sass/pages/form-registration';
 //themes

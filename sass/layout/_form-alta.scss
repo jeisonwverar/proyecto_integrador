@@ -1,0 +1,78 @@
+.form-alta{
+    width: 80%;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, .15);
+    backdrop-filter:blur(5px);
+    margin: 2em;
+    display: flex;
+    flex-direction: column;
+    padding: 0.8em;
+    &__section-one{
+        border: rgba(232, 8, 8, 0.311) solid 4px;
+        margin-bottom: 1em;
+        padding: 1.5em;
+        & div{
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            text-align: center;
+        }
+        &--title{
+            text-align: center;
+            margin-bottom: 0.2em;
+            color: rgb(63, 98, 239);
+        }
+        &--name input,
+        &--brand input{
+           background: inherit;
+            outline: 0;
+            border: none;
+            border-bottom: 1px solid black;
+            text-align: center;
+            padding: 0.2em;
+            margin-bottom: 0.2em;
+            font-weight:600 ;
+
+        }
+        &--name label,
+        &--brand label,
+        &--age label,
+        &--img label{
+            text-align: center;
+            padding: 0.2em;
+            margin-bottom: 0.2em;
+            font-weight:bold ;
+            font-size: 1.2rem;
+
+        }
+        &--age select{
+            width: 80%;
+            text-align: center;
+            margin: 0 auto;
+            background: inherit;
+            
+        }
+        &--img input{
+            border: solid red 2px;
+        }
+
+
+
+    }
+    &__section-two{
+        border: rgba(8, 228, 232, 0.311) solid 4px;
+        margin-bottom: 1em;
+        padding: 1.5em;
+        & div{
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            text-align: center;
+            
+        }
+        
+    }
+    
+}
+

@@ -32,14 +32,14 @@ $shadow:hsl(213, 30%, 32%);
         object-fit: contain;
         
         @media (min-width:320px){
-    
+                flex-basis: 100%;
         }
         @media (min-width:780px){
             background-size:8em;
             padding:2em ;
             
         }
-        @media (min-width:900px){
+        @media (min-width:920px){
             flex-grow: 1;
             background-size: 9em;
 
@@ -158,14 +158,5 @@ $shadow:hsl(213, 30%, 32%);
     }
 
 
-    &__theme{
-        position: absolute;
-        top: 2px;
-        right: 2px;
-        width: 1.8em;
-        height: 1.8em;
-        border-radius: 50%;
-        background-color: inherit;
-        border: thin solid rgba(46, 49, 219, 0.959);
-    }
+    
 }
