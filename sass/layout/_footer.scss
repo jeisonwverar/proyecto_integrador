@@ -44,6 +44,10 @@
         &-logo{
             border:2px solid red;
             order: 1;
+            height: 12em;
+            flex-basis: 100%;
+            margin: 0 25%;
+            
 
         }
         &-phone{
@@ -72,9 +76,10 @@
             display: flex;
             justify-content: center;
             gap:4em;
-            padding: 0.2em;
+            padding: 0.3em;
            & .footer__icon{
-                transform: scale(1.4);
+                width: 2em;
+                overflow: hidden;
                 
            } 
            @media (min-width:780px) {

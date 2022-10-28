@@ -5,7 +5,8 @@ $shadow:hsl(213, 30%, 32%);
 
 
 .main-header{
-    background-image: linear-gradient(hsl(179, 55%, 34%),hsl(179, 44%, 55%)); 
+    background-image: linear-gradient(hsl(179, 55%, 34%),hsl(179, 44%, 55%));
+    padding: 1em; 
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -14,17 +15,21 @@ $shadow:hsl(213, 30%, 32%);
     @media (min-width:780px){
         /* line-height: 4em; */
     }
-
+    &__hamburger-button-container{
+        background-image:inherit;
+        border: red solid 2px;
+    }
+   
     
     &__logo-container{
         border: thin solid red;
         flex-basis: 100%;
-        background-image: url('/img/logo.png');
+        background-image: url('/img/new-logo.png');
         background-position:center;
         background-size:5.5em;
         background-repeat: no-repeat;
-        padding: 1em;
-        object-fit: cover;
+        padding-top: 3em;
+        object-fit: contain;
         
         @media (min-width:320px){
     
@@ -139,7 +144,6 @@ $shadow:hsl(213, 30%, 32%);
         }
     }
     &__main-nav-container{
-        background-color:$main-first;
         order: 4;
         flex-basis: 100%;
         display: none;

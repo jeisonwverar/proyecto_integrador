@@ -16,7 +16,7 @@
     background-color: orange;
     }
 
-    &:nth-child(5n+1){
+    /* &:nth-child(5n+1){
         background: linear-gradient( to bottom, hsl(300,30%,55%)0%,hsl(300,30%,40%)100%);
     }   
 
@@ -36,7 +36,7 @@
     &:nth-child(5n+5){
         background: linear-gradient( to bottom, hsl(250,30%,55%)0%,hsl(250,30%,40%)100%);
         background-color: #e3f3db;
-    }
+    } */
     &__article{
         display: flex;
         flex-direction: column;
@@ -67,8 +67,9 @@
         height: 100%;
         object-fit: cover;
     }
-    /*
+    
     &__content{
-        /* broder: 4px solid magenta;
-    } */
+        background-image:linear-gradient(#f7f0f0 50%,#48bea5) ;
+        text-align: center;
+    }
 }
