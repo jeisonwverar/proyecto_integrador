@@ -4,20 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nosotros</title>
-    <link rel="stylesheet" href="/css/main.css">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
-    <input type="checkbox" name="" id="main-nav-toggle" class="main-nav-toggle">
+    <!-- checkbox para el hamburger menu -->
+    <input type="checkbox" id="main-nav-toggle" class="main-nav-toggle">
     <header class="main-header">
         <div class="main-header__logo-container">
-            
+            <img src="/img/logo-cosmic.png" alt="">
         </div>
         <div class="main-header__search-form-container">
-            Formulario
+            <input type="search" id="search" class="main-header__search-form-container__input">
+            <label for="search" class="main-header__search-form-container__label"></label>
         </div>
-        <div class="main-header__cart-button-container" title="cart">
-        
+        <div class="main-header__cart-button-container" title="cart"></div>
+        <div class="main-header__theme">
+           <button class="main-header__theme-button">🌙</button>
         </div>
         <div class="main-header__hamburger-button-container">
             <label for="main-nav-toggle" class="hamburger-button">
@@ -38,7 +42,6 @@
                     <li class="main-nav__item">
                         <a href="contacto.html" class="main-nav__link">Contacto</a>
                     </li>
-                    </li>
                     <li class="main-nav__item">
                         <a href="nosotros.html" class="main-nav__link">Nosotros</a>
                     </li>
@@ -46,6 +49,7 @@
             </nav>
         </div>
     </header>
+    <main class="main">
 
     <main class="aboutus">
         <div class="aboutus-logo">
@@ -100,5 +104,44 @@
             </div>
         </section>
     </main>
+    <footer class="main-footer">
+            
+        <section class="main-footer__newsletter">
+            <h2 class="main-footer__newsletter-title footer__paragraph-newsletter">Newsletter</h2>
+            <p class="main-footer__newsletter-paragraph footer__paragraph-newsletter">
+                To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never 
+                send you spam or pass on your email address.
+            </p>
+            <form class="main-footer__newsletter-form">
+                <input type="email" class="footer__input">
+                <input type="submit" class="footer__cta" value="suscribirme">
+            </form>
+        </section>
+        <section class="main-footer__content" >
+                <figure class="main-footer__content-logo">
+                    <img src="/img/logo-cosmic.png" alt="logo" class="main-footer__content-logo--img">
+                </figure>
+                <div class="main-footer__content-phone">
+                     <img src="/img/icon-phone.svg" alt="phone" class="footer__img">
+                </div>
+                <div class="main-footer__content-email">
+                     <img src="/img/icon-email.svg" alt="email" class="footer__img">
+                </div>
+                <div class="main-footer__content-social">
+                    <a href="#" class="footer__link">
+                        <img src="/img/fb.svg" alt="facebook" class="footer__icon">
+                    </a>
+                    <a href="#" class="footer__link">
+                        <img src="/img/intagram.svg" alt="intagram" class="footer__icon">
+                    </a>
+                <a href="#" class="footer__link">
+                  <img src="/img/twitter.svg" alt="twitter" class="footer__icon">
+                </a>
+            </div> 
+        </section>
+        <section class="main-footer__copy">
+                <h3>©2022 Juguetería Cosmicá. Todos los Derechos Reservados</h3>
+        </section>
+    </footer>
 </body>
 </html>

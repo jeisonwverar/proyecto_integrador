@@ -9,10 +9,7 @@
 $animationSpeed: 40s;
 
 
-.marcas{
-	overflow: hidden;
-	width: 100%;
-}
+
 // Animation
 @keyframes scroll {
 	0% {
@@ -28,10 +25,10 @@ $animationSpeed: 40s;
 	background: white;
 	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
 	height: 100px;
-	margin: auto;
+	margin: 2em auto;
 	overflow: hidden;
 	position: relative;
-	width: 960px;
+	width: 90%;
 
 	&::before,
 	&::after {
@@ -57,12 +54,17 @@ $animationSpeed: 40s;
 	.slide-track {
 		animation: scroll $animationSpeed linear infinite;
 		display: flex;
-		width: calc(250px * 14);
+		width: calc(250px * 10);
+
+		&__slide {
+			height: 100px;
+			width: 250px;
+			overflow: hidden;
+			& img{
+				object-fit: contain;
+	
+			}
+		}
 	}
 
-	.slide {
-		height: 100px;
-		width: 250px;
-		overflow: hidden;
-	}
 }

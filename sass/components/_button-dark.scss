@@ -1,29 +1,31 @@
 .main-header__theme{
-    position: absolute;
-    top:2vh;
-    right: 2vw;
-    width: 1em;
-    height: 1em;
-    background-color: aqua;
-    border-radius: 30%;
-
+     
     &-button{
-        background-color: bisque;
-        width: 80%;
-        height: 80%;
+
+        position: absolute;
+        z-index: 999;
+        top: 2vh;
+        right: 2vw;
+        width: 3rem;
+        height: 3rem;
+        font-size: 2em;
+        border-radius: 50%;
+        outline: 0;
+        border: none;
+        background-color: inherit;
+        transition:  all 0.3s ease-out;
+        @media(min-width:680) {
+            
+        }
     }
 
-    &-button:active {
-        background-color: black;
-    }
-
-    &-button:hover{
-        background-color: azure;
+    &:hover{
+        background-color: rgb(63, 57, 57);
+        color:rgb(255, 217, 0);
+        
     }
 }
 
-
-  
   
   
  

@@ -6,18 +6,20 @@ $shadow:hsl(213, 30%, 32%);
 
 .main-header{
     background-image: linear-gradient(hsl(179, 55%, 34%),hsl(179, 44%, 55%));
-    padding: 1em; 
+    padding: 0.8em; 
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom:2em ;
     box-shadow: 0 0 6px 3px $shadow;
-    @media (min-width:780px){
-        /* line-height: 4em; */
+    @media (min-width:680px){
+     
     }
     &__hamburger-button-container{
-        background-image:inherit;
-        border: red solid 2px;
+        border-radius: 2px;
+        box-shadow:  -1px -1px 2px 2px #bebebe,
+             1px 1px 2px 2px #ffffff;
+        
     }
    
     
@@ -41,15 +43,17 @@ $shadow:hsl(213, 30%, 32%);
         @media (min-width:320px){
                 flex-basis: 100%;
                 margin-bottom: 0.2em;
+                padding: 2.6em;
         }
         @media (min-width:780px){
             background-size:8em;
-            padding:2em ;
+            padding:3em ;
             
         }
         @media (min-width:920px){
             flex-grow: 1;
             background-size: 9em;
+            
 
         }
         
@@ -58,20 +62,27 @@ $shadow:hsl(213, 30%, 32%);
     }
     
     &__search-form-container{
-        border: thin solid hsla(162, 72%, 50%, 0.76);
+        /* border: thin solid hsla(162, 72%, 50%, 0.76);
+        border-radius:2em ; */
         background-color:inherit;
         display: flex;
         justify-content: center;
         align-items: center;
         order:2;
-    
+        
+        @media (min-width:320px){
+            width: 50%;
+            padding: 0;
+        }
         @media (min-width:780px){
             order: 2;
             flex-grow: 2;
         }
         &:focus-within{
             background-color: $main-second;
-            transition: 2s ;
+            transition: 2s ; 
+            outline: none;
+            border-radius:4px ;
         }
 
         &__input{
@@ -114,7 +125,7 @@ $shadow:hsl(213, 30%, 32%);
 
     
     &__cart-button-container{
-        border: thin solid rgba(219, 156, 38, 0.76);
+        /* border: thin solid rgba(219, 156, 38, 0.76); */
         background-color:inherit;
         background-image: url('/img/cart-main.png');
         background-repeat: no-repeat;
@@ -126,10 +137,14 @@ $shadow:hsl(213, 30%, 32%);
         &:hover{
             cursor: pointer;
             background-color: $main-second;
+            border-radius: 40%;
+            
         }
         
         
         @media (min-width:320px){
+            width: 3em;
+            margin-left: 2px;
         }
         @media (min-width:780px){
             order: 3;
@@ -141,7 +156,7 @@ $shadow:hsl(213, 30%, 32%);
     
     &__hamburger-button-container{
         background-color:$main-first;
-        border: thin solid rgba(110, 219, 38, 0.76);
+        /* border: thin solid rgba(110, 219, 38, 0.76); */
         order:3;
         flex-basis: 2;
 
