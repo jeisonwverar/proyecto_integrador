@@ -41,7 +41,7 @@
         &--img label{
             text-align: center;
             padding: 0.2em;
-            margin-bottom: 0.2em;
+            margin-bottom: 0.3em;
             font-weight:bold ;
             font-size: 1.2rem;
 
@@ -54,8 +54,12 @@
             
         }
         &--img input{
-            border: solid red 2px;
+            text-align: center;
+            display: block;
+            width: 100%;
+            
         }
+        
 
 
 
@@ -67,12 +71,68 @@
         & div{
             display: flex;
             flex-direction: column;
-            gap: 1em;
+            gap: 2em;
             text-align: center;
-            
         }
+        &--title{
+            text-align: center;
+            margin-bottom: 0.3em;
+            color: rgb(63, 98, 239);
+        }
+        &--short label,
+        &--long label,
+        &--price label,
+        &--cost p,
+        &--cost label{
+            text-align: center;
+            padding: 0.2em;
+            margin-bottom: 0.3em;
+            font-weight:bold ;
+            font-size: 1.2rem;
+        }
+        &--price input{
+            background: inherit;
+            outline: 0;
+            border: none;
+            border-bottom: 1px solid black;
+            text-align: center;
+            padding: 0.2em;
+            margin-bottom: 0.2em;
+            font-weight:600 ;
+            margin-bottom: 0.2em;
+        }
+        & textarea{
+            padding: 0.2em;
+            margin-bottom: 0.2em;
+
+        }
+
         
     }
-    
+    &__reset,
+    &__submit{
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 0.4em;
+        padding: 0.2em;
+        color: white;
+        background-color: hsla(209, 100%, 50%, 0.671);
+        border-radius: 4px;
+        outline: none;
+        cursor: pointer;
+        @media(min-width: 680px){
+            max-width: 60%;
+            margin-bottom: 1em;
+        }
+    }
+    &__reset:hover,
+    &__submit:hover{  
+        background-color: hsla(253, 100%, 50%, 0.747);
+    }
+
+    @media(min-width: 920px){
+        max-width: 720px;
+    }
+
 }
 

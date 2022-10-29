@@ -5,20 +5,55 @@
     gap:1em;
     justify-content: center;
    &-logo{
-    background-image:url('/img/new-logo.png'),url('/img/fondo-logo.png');
+    background-image:url('/img/fondo-logo.png');
     background-blend-mode: screen;
     object-fit: cover;
     width: 100%;
     height: 20em;
     background-position: center;
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+        @media(min-width:800px){
+            background-attachment: fixed;
+            background-position: 50% 40%;
+            height: 500px;
+        }
+        & img{
+           display: block;
+           margin: 0 auto;
+           width: 10em;
+           
+           animation-name: animar;
+           animation-duration: 2s;
+           animation-iteration-count: infinite;
+           animation-direction: alternate;
+
+           @keyframes animar {
+
+            from{
+                transform: translateY(-80px) rotate(5deg);
+                
+
+            }to{
+                transform: translateY(0px);
+            }
+            
+           }
+        }
+
    }
    &-main{
     color: aliceblue;
     padding: 0.2em;
     &-title{
         text-align: center;
-        padding: 0.2em;
+        padding: 0.4em;
+        width: 100%;
+        
+        
     }
     &-p{
         padding: 0.5em;
@@ -42,22 +77,6 @@
         }
     }
    }
-   &-value{
-        /* background-color: aqua; */
-        &__title{
-            text-align: center;
-            padding: 0.2em;
-            color: aliceblue;
-        }
-        &__container{
-            color: aliceblue;
-        }
-        &__list{
-            padding: 2em;
-            list-style: circle;
-            line-height: 1.2em;
-        }
-   }
    &-history{
     display: flex;
     flex-direction: column;
@@ -68,6 +87,15 @@
     background-size: 8em;
     background-position: center;
     background-repeat: no-repeat;
+    &__title{
+        margin: 0 auto;
+        margin-bottom: 1.5em;
+    }
+    @media(min-width:860px){
+        max-width: 600px;
+        
+    }
+    
 
     &__container-reverse{
         display: grid;
@@ -98,15 +126,20 @@
         display: grid;
         grid-template-columns: repeat(2,1fr);
         grid-template-rows:repeat(2,1fr);
-        grid-area: "img title",
-                    "img para";
+        grid-area: " para title ",
+                    "img  img ";
         margin-bottom: 2em;
                     &-img{
                         width: 12em;
                         height: 12em;
                         object-fit: cover;
                         display: block;
-                        grid-area: "img";
+                        /* grid-area: "img"; */
+                        @media(max-width:320px){
+                            width: 8em;
+                            height: 8em;
+                            
+                        }
                         
                     } 
                     &-title{
@@ -122,7 +155,16 @@
                     
 
     }
+    &__container figure,
+    &__container-reverse figure{
+        margin: 0;
+        
+        grid-area: "img";
+        display: flex;
+        
+        
+    }
    }
 
 
-  }
+}

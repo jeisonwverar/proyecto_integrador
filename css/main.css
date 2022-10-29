@@ -796,7 +796,7 @@ body {
 .form-alta__section-one--name label, .form-alta__section-one--brand label, .form-alta__section-one--age label, .form-alta__section-one--img label {
   text-align: center;
   padding: 0.2em;
-  margin-bottom: 0.2em;
+  margin-bottom: 0.3em;
   font-weight: bold;
   font-size: 1.2rem;
 }
@@ -807,7 +807,9 @@ body {
   background: inherit;
 }
 .form-alta__section-one--img input {
-  border: solid red 2px;
+  text-align: center;
+  display: block;
+  width: 100%;
 }
 .form-alta__section-two {
   border: rgba(8, 228, 232, 0.311) solid 4px;
@@ -817,8 +819,60 @@ body {
 .form-alta__section-two div {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 2em;
   text-align: center;
+}
+.form-alta__section-two--title {
+  text-align: center;
+  margin-bottom: 0.3em;
+  color: rgb(63, 98, 239);
+}
+.form-alta__section-two--short label, .form-alta__section-two--long label, .form-alta__section-two--price label, .form-alta__section-two--cost p, .form-alta__section-two--cost label {
+  text-align: center;
+  padding: 0.2em;
+  margin-bottom: 0.3em;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.form-alta__section-two--price input {
+  background: inherit;
+  outline: 0;
+  border: none;
+  border-bottom: 1px solid black;
+  text-align: center;
+  padding: 0.2em;
+  margin-bottom: 0.2em;
+  font-weight: 600;
+  margin-bottom: 0.2em;
+}
+.form-alta__section-two textarea {
+  padding: 0.2em;
+  margin-bottom: 0.2em;
+}
+.form-alta__reset, .form-alta__submit {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 0.4em;
+  padding: 0.2em;
+  color: white;
+  background-color: hsla(209deg, 100%, 50%, 0.671);
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+}
+@media (min-width: 680px) {
+  .form-alta__reset, .form-alta__submit {
+    max-width: 60%;
+    margin-bottom: 1em;
+  }
+}
+.form-alta__reset:hover, .form-alta__submit:hover {
+  background-color: hsla(253deg, 100%, 50%, 0.747);
+}
+@media (min-width: 920px) {
+  .form-alta {
+    max-width: 720px;
+  }
 }
 
 .main-header__theme {
@@ -986,8 +1040,26 @@ body {
   align-items: stretch;
   margin-bottom: 2em;
 }
+@media (min-width: 580px) {
+  .main-contact {
+    background-image: url("/img/fondo-contact.png");
+    gap: 2em;
+  }
+}
 .main-contact-title {
-  border: 4px solid red;
+  color: hsla(60deg, 3%, 23%, 0.904);
+  text-shadow: 0 0 2px rgb(39, 33, 33);
+  text-align: center;
+  font-weight: 600;
+}
+@media (min-width: 680px) {
+  .main-contact-title {
+    background-image: url("/img/title-contact.png");
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    padding: 0.2em;
+  }
 }
 
 .aboutus {
@@ -998,13 +1070,40 @@ body {
   justify-content: center;
 }
 .aboutus-logo {
-  background-image: url("/img/new-logo.png"), url("/img/fondo-logo.png");
+  background-image: url("/img/fondo-logo.png");
   background-blend-mode: screen;
   object-fit: cover;
   width: 100%;
   height: 20em;
   background-position: center;
   background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 800px) {
+  .aboutus-logo {
+    background-attachment: fixed;
+    background-position: 50% 40%;
+    height: 500px;
+  }
+}
+.aboutus-logo img {
+  display: block;
+  margin: 0 auto;
+  width: 10em;
+  animation-name: animar;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes animar {
+  from {
+    transform: translateY(-80px) rotate(5deg);
+  }
+  to {
+    transform: translateY(0px);
+  }
 }
 .aboutus-main {
   color: aliceblue;
@@ -1012,7 +1111,8 @@ body {
 }
 .aboutus-main-title {
   text-align: center;
-  padding: 0.2em;
+  padding: 0.4em;
+  width: 100%;
 }
 .aboutus-main-p {
   padding: 0.5em;
@@ -1035,22 +1135,6 @@ body {
   background-color: rgba(99, 151, 172, 0.966);
   transform: scaleY(0.4em);
 }
-.aboutus-value {
-  /* background-color: aqua; */
-}
-.aboutus-value__title {
-  text-align: center;
-  padding: 0.2em;
-  color: aliceblue;
-}
-.aboutus-value__container {
-  color: aliceblue;
-}
-.aboutus-value__list {
-  padding: 2em;
-  list-style: circle;
-  line-height: 1.2em;
-}
 .aboutus-history {
   display: flex;
   flex-direction: column;
@@ -1061,6 +1145,15 @@ body {
   background-size: 8em;
   background-position: center;
   background-repeat: no-repeat;
+}
+.aboutus-history__title {
+  margin: 0 auto;
+  margin-bottom: 1.5em;
+}
+@media (min-width: 860px) {
+  .aboutus-history {
+    max-width: 600px;
+  }
 }
 .aboutus-history__container-reverse {
   display: grid;
@@ -1088,7 +1181,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-area: "img title", "img para";
+  grid-area: " para title ", "img  img ";
   margin-bottom: 2em;
 }
 .aboutus-history__container-img {
@@ -1096,7 +1189,13 @@ body {
   height: 12em;
   object-fit: cover;
   display: block;
-  grid-area: "img";
+  /* grid-area: "img"; */
+}
+@media (max-width: 320px) {
+  .aboutus-history__container-img {
+    width: 8em;
+    height: 8em;
+  }
 }
 .aboutus-history__container-title {
   grid-area: "title";
@@ -1107,6 +1206,11 @@ body {
   grid-area: "para";
   padding: 0.2em;
   align-self: center;
+}
+.aboutus-history__container figure, .aboutus-history__container-reverse figure {
+  margin: 0;
+  grid-area: "img";
+  display: flex;
 }
 
 .form-registration {

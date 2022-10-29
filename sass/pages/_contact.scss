@@ -7,8 +7,25 @@
   justify-content: center;
   align-items: stretch;
   margin-bottom: 2em;
+   @media(min-width:580px) {
+     background-image: url('/img/fondo-contact.png');
+     gap:2em;
+   }
+
   &-title{
-    border: 4px solid red;
+    
+    color: hsla(60, 3%, 23%, 0.904);
+    text-shadow: 0 0 2px rgb(39, 33, 33);
+    text-align: center;
+    font-weight: 600;
+    @media(min-width:680px) {
+      background-image: url('/img/title-contact.png');
+      background-position: center;
+      background-size: cover;
+      object-fit: cover;
+      padding: 0.2em;
+      
+    }
     
 }
 }
