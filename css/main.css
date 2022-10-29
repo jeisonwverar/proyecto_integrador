@@ -388,18 +388,23 @@ body {
   border: red solid 2px;
 }
 .main-header__logo-container {
-  border: thin solid red;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
   flex-basis: 100%;
-  background-image: url("/img/new-logo.png");
-  background-position: center;
-  background-size: 5.5em;
-  background-repeat: no-repeat;
-  padding-top: 3em;
-  object-fit: contain;
+  object-fit: cover;
+  height: 4em;
+}
+.main-header__logo-container img {
+  display: block;
+  margin: 0 auto;
+  width: 20em;
+  height: 20em;
 }
 @media (min-width: 320px) {
   .main-header__logo-container {
     flex-basis: 100%;
+    margin-bottom: 0.2em;
   }
 }
 @media (min-width: 780px) {
