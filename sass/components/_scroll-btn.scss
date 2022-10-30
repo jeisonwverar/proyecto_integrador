@@ -1,0 +1,25 @@
+.scroll-top-btn{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(10, 77, 68);
+    color: aliceblue;
+    z-index: 999;
+    position: fixed;
+    font-size: 2rem;
+    font-weight: bold;
+    bottom: 2vh;
+    right: 2vh;
+    opacity: 1;
+    visibility: visible;
+    &-top-btn:hover{
+        background-color: silver;
+        color: white;
+    }
+}
+
+.btn-hidden{
+    opacity: 0;
+    visibility: hidden;
+}
