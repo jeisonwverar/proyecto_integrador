@@ -1,6 +1,6 @@
 const d=document;
 const ls=localStorage;
-console.log(ls)
+
 
 export default function darkTheme(btn,classDark){
     const $themeBtn= d.querySelector(btn);

@@ -961,10 +961,9 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
   margin-bottom: 2em;
   padding: 2em auto;
-  scroll-behavior: smooth;
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2), 0 0 8px rgba(0, 0, 0, 0.05);
   transition: all 0.2s;
   /*  &:nth-child(5n+1){
@@ -1004,14 +1003,11 @@ body {
   transform: scale(1.06) rotate(0.8deg);
   transform-origin: bottom;
   background-color: rgb(250, 194, 88);
+  cursor: pointer;
 }
 .card:hover > .card__action {
   visibility: visible;
   transition: ease 3s;
-}
-.card:hover .card__content {
-  transition: ease 2s;
-  transform: translate(0);
 }
 .card__action {
   position: absolute;
@@ -1037,7 +1033,6 @@ body {
 .card__article {
   position: absolute;
   width: 100%;
-  height: inherit;
   text-align: center;
 }
 .card__image-container {
@@ -1051,8 +1046,6 @@ body {
   width: inherit;
 }
 .card__content {
-  border: solid 2px silver;
-  transform: translate(0, 70%);
   background-color: rgba(12, 12, 12, 0.474);
   backdrop-filter: blur(5px);
   color: #d7e6e6;
@@ -1070,7 +1063,7 @@ body {
   background: white;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
   height: 100px;
-  margin: 0 auto;
+  margin: 1em auto;
   overflow: hidden;
   position: relative;
   width: 90%;
@@ -1123,14 +1116,86 @@ body {
   opacity: 1;
   visibility: visible;
 }
-.scroll-top-btn-top-btn:hover {
-  background-color: silver;
+.scroll-top-btn:hover {
+  background-color: rgb(21, 250, 219);
   color: white;
+  cursor: pointer;
 }
 
 .btn-hidden {
   opacity: 0;
   visibility: hidden;
+}
+
+.slider__main {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  /* border: solid red 2px; */
+}
+.slider__main-slides {
+  position: relative;
+  height: 400px;
+}
+@media (min-widht: 320px) {
+  .slider__main-slides {
+    height: 100px;
+    width: 200px;
+    transform: scale(0.4);
+    object-fit: cover;
+  }
+}
+.slider__main-slides-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 1;
+  visibility: hidden;
+  transition: opacity 1s ease;
+}
+.slider__main-slides-item img {
+  height: 300px;
+  width: 800px;
+  object-fit: cover;
+}
+@media (min-widht: 320px) {
+  .slider__main-slides-item img {
+    height: 50px;
+    width: 100px;
+    transform: scale(0.4);
+    object-fit: cover;
+  }
+}
+.slider__main-slides-btns {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.slider__main-slides-btns a {
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: thin solid #002;
+  text-decoration: none;
+  background-color: rgb(119, 179, 233);
+  color: #000;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.slider__main-slides-btns a:hover {
+  color: #4d4d4d;
+}
+
+.active {
+  visibility: visible;
 }
 
 .cards-container {
@@ -1144,15 +1209,16 @@ body {
 }
 
 .section-cards__header {
+  color: rgba(255, 255, 255, 0.726);
   background-color: hsl(39deg, 94%, 66%);
   box-shadow: 0px 0px 10px 1px hsl(0deg, 61%, 7%);
   text-align: center;
   margin-bottom: 2em;
   padding: 1em auto;
-  color: hsl(0deg, 0%, 9%);
 }
 .section-cards__header p {
   margin-bottom: 0.4em;
+  font-size: 1.6rem;
 }
 
 .main-contact {
@@ -1348,6 +1414,11 @@ body {
   background-position: center;
   background-size: cover;
   object-fit: cover;
+}
+
+.dark-theme {
+  color: rgba(255, 255, 255, 0.89);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.514), black);
 }
 
 /*# sourceMappingURL=main.css.map */

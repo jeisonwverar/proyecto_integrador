@@ -20,9 +20,11 @@
 @use '../sass/components/card';
 @use '../sass/components/slider';
 @use '../sass/components/scroll-btn';
+@use '../sass/components/slider-main';
 //pages
 @use '../sass/pages/index';
 @use '../sass/pages/contact';
 @use '../sass/pages/about-us';
 @use '../sass/pages/form-registration';
 //themes
+@use '../sass/themes/dark.scss'

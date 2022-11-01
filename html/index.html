@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-dark>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/main.css">
 </head>
-<body>
+<body data-dark>
     <!-- checkbox para el hamburger menu -->
     <input type="checkbox" id="main-nav-toggle" class="main-nav-toggle">
-    <header class="main-header">
+    <header class="main-header" data-dark>
         <div class="main-header__logo-container">
             <img src="/img/logo-cosmic.png" alt="">
         </div>
@@ -49,8 +49,26 @@
             </nav>
         </div>
     </header>
-    <div class="slider">
-
+    <div class="slider__main">
+        <div class="slider__main-slides">  
+            <div class="slider__main-slides-item active">
+                <img src="/img/advertising/photo2.jpeg" alt="publicidad1">
+            </div>
+            <div class="slider__main-slides-item">
+                <img src="/img/advertising/advertising1.jpeg" alt="publicidad2"> 
+            </div>
+            <div class="slider__main-slides-item">
+                <img src="/img/advertising/photo3.jpeg" alt="publicidad3">
+        
+            </div>
+            <div class="slider__main-slides-item">
+                <img src="/img/advertising/advertising3.jpeg" alt="publicidad4">
+            </div>
+        </div>
+        <div class="slider__main-slides-btns">
+            <a class="prev" href="#">&laquo;</a>
+            <a class="next" href="#">&raquo;</a>
+        </div>
     </div>
     <main class="main">
         <section class="section-cards">
@@ -428,7 +446,7 @@
                 </div>
             </div>
         </div>
-        <footer class="main-footer">
+        <footer class="main-footer" data-dark>
             
             <section class="main-footer__newsletter">
             <h2 class="main-footer__newsletter-title footer__paragraph-newsletter">Newsletter</h2>

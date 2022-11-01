@@ -5,10 +5,10 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
     margin-bottom: 2em;
     padding: 2em auto;
-    scroll-behavior: smooth;
+
     
     box-shadow:
     1px 3px 5px rgba(0,0,0,0.2),
@@ -26,17 +26,14 @@
     transform: scale(1.06) rotate(0.8deg);
     transform-origin:bottom;
     background-color: rgb(250, 194, 88);
+    cursor: pointer;
     }
 
     &:hover >.card__action{
         visibility: visible;
         transition: ease 3s;
     }
-    &:hover  .card__content{
-        transition: ease 2s ;
-        transform: translate(0);
-    }
-
+    
    /*  &:nth-child(5n+1){
         background: linear-gradient( to bottom, hsl(300,30%,55%)0%,hsl(300,30%,40%)100%);
     }   
@@ -88,8 +85,9 @@
     &__article{
         position: absolute;
         width: 100%;
-        height: inherit;
+        
         text-align: center;
+       
        
 
     }    
@@ -107,8 +105,6 @@
     }
     
     &__content{
-        border: solid 2px silver;
-        transform: translate(0,70%);
         background-color: rgba(12, 12, 12, 0.474);  
         backdrop-filter: blur(5px);
         color: #d7e6e6;
