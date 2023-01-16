@@ -1,3 +1,8 @@
+import spa from './spa.js'
+
+
+
+
 const ls=localStorage;
 const d=document;
 const w=window;
@@ -61,7 +66,8 @@ function darkTheme(btn,classDark){
     });
     
     d.addEventListener('DOMContentLoaded',(e)=>{
-     /* console.log(ls) */
+        //carga de lap agina spa
+        spa();
     if(ls.getItem('theme')===null)ls.setItem('theme','light');
 
     if(ls.getItem('theme')==='light')lightMode();
@@ -83,7 +89,7 @@ function slider(){
     console.log($slides, $nextBtn, $prevBtn);
     let i=0;
      d.addEventListener('click',e=>{
-        console.log(e.target)
+        //console.log(e.target)
        if(e.target===$prevBtn){
             e.preventDefault();
             $slides[i].classList.remove('active');

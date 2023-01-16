@@ -1,0 +1,58 @@
+
+    <main class="form-registration">
+        <!-- Deberá contener un formulario con los siguientes campos: “nombre”, “precio”, “stock”, “marca”, “categoría”, “descripción corta”, “descripción larga”, “envío sin cargo”, “edad desde”, “edad hasta” y “foto”. -->
+        <form action="POST" class="form-alta">
+            <section class="form-alta__section-one">
+                <h2 class="form-alta__section-one--title">Producto</h2>
+                <div class="form-alta__section-one--name">
+                    <label for="name">Nombre: <sup>*</sup></label>
+                    <input type="text" id="name"  name="name" autofocus required>
+                </div>
+                <div class="form-alta__section-one--brand">
+                    <label for="brand">marca: <sup>*</sup></label>
+                    <input id="brand"  name="brand"  required>
+                </div>
+                <div class="form-alta__section-one--age">
+                    <label for="age">Apto para niños de: <sup>*</sup></label>
+                    <select name="age" id="age" required >
+                        <option value="1"> -seleccionar- </option>
+                        <option value="2"> 0 a 24 meses </option>
+                        <option value="3"> 2 a 4 años </option>
+                        <option value="4"> 4 a 6 años </option>
+                        <option value="5"> 7 a 8 años </option>
+                        <option value="6"> 8 a 13 años </option>
+                        <option value="8"> 14 + </option>
+                    </select>
+                </div>
+                <div class="form-alta__section-one--img">
+                    <label for="img">Foto: <sup>*</sup></label>
+                    <input type="file" id="img"  name="img" required accept=".jpg,.png,.svg" >
+                </div>
+            </section>
+            <section class="form-alta__section-two">
+                <h2 class="form-alta__section-two--title">descripcion</h2>
+                <div class="form-alta__section-two--short">
+                    <label for="description-short">descripcion corta: <sup>*</sup></label>
+                    <textarea name="description-short" id="description-short" cols="30" rows="10" minlength="2" maxlength="100" placeholder="descripcíon maxima de 100 caractéres"></textarea>
+                </div>
+                <div class="form-alta__section-two--long">
+                    <label for="description-long">descripcion larga: <sup>*</sup></label>
+                    <textarea name="description-short" id="description-short" cols="30" rows="10" minlength="2" maxlength="350" placeholder="descripcíon maxima de 350 caractéres"></textarea>
+                </div>
+                <div class="form-alta__section-two--price">
+                    <label for="img">precio: <sup>*</sup></label>
+                    <input type="text" id="img"  name="img" required accept=".jpg,.png,.svg">
+                </div>
+                <div class="form-alta__section-two--cost">
+                    <p>Envío sin costo:<sup>*</sup></p>
+                    <label for="cost">si:</label>
+                    <input type="radio" id="cost-yes"  name="cost" required >
+                    <label for="cost">no:</label>
+                    <input type="radio" id="cost-no"  name="cost" required >
+                </div>
+            </section>
+            <input type="submit" class="form-alta__submit">
+            <input type="reset"class="form-alta__reset">
+        </form>
+    </main>
+   
