@@ -1,7 +1,10 @@
 const d =document;
 
-const  formContact=()=>{
+const  formContact=(formEl)=>{
  console.log('desde el formulario')
+ const form=d.querySelector(formEl);
+
+  return console.log(form)
 }
 
 

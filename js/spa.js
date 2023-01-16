@@ -1,5 +1,5 @@
 import slider from "./slider-home.js";
-import formContact from "./form-contact.js";
+//import formContact from "./form-contact.js";
 
 
 const root = document.querySelector('#root');
@@ -21,7 +21,7 @@ const getHTML=async(route)=>{
         }
     } catch (error) {
         console.error(error.status)
-        root.innerHTML=`<img src="../img/error404.png" alt="error404">`;
+        
        
 
     }
@@ -44,8 +44,8 @@ const spa =async()=>{
          switch (route) {
              case '#/home':
              await getHTML(locationElement.slice(1))
-              console.log(document.getElementsByClassName('main'))
-              await slider();
+              //console.log(document.getElementsByClassName('main'))
+               slider();
                  break;
          
              case '#/alta':
@@ -58,7 +58,7 @@ const spa =async()=>{
                  break;
              case '#/nosotros':
                 await  getHTML(locationElement.slice(1))
-                 await formContact();
+                // formContact('.contact');
                  break;
              case '#/contacto':
                 await getHTML(locationElement.slice(1))
