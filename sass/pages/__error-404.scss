@@ -1,0 +1,11 @@
+.error{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(251, 241, 241);
+    &__img{
+        width: 100%;
+        height: 100vh;
+        display: block;
+    }
+}

@@ -17,7 +17,8 @@ const getHTML=async(route)=>{
             throw err('error')
         }
     } catch (error) {
-        
+        console.error(error.status)
+        root.innerHTML=`<img src="../img/error404.png" alt="error404">`;
        
 
     }
@@ -60,12 +61,10 @@ const spa =()=>{
                  getHTML(locationElement.slice(1))
                  
                  break;
-         
+
              default:
-                 getHTML('error404')
+                 getHTML('/error404');
                  break;
-  
-  
          }
   
      };
