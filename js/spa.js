@@ -1,3 +1,6 @@
+import slider from "./slider-home.js";
+import formContact from "./form-contact.js";
+
 
 const root = document.querySelector('#root');
 const getHTML=async(route)=>{
@@ -28,42 +31,42 @@ const getHTML=async(route)=>{
  
 
 
-const spa =()=>{
+const spa =async()=>{
 
   getHTML('/home')
   
   window.addEventListener('hashchange',e=>{
-    
+    e.preventDefault()
   const locationElement= window.location.hash;
   console.log(locationElement)
      const router = async(route)=>{
      
          switch (route) {
              case '#/home':
-              getHTML(locationElement.slice(1))
+             await getHTML(locationElement.slice(1))
               console.log(document.getElementsByClassName('main'))
-                 
+              await slider();
                  break;
          
              case '#/alta':
-                 getHTML(locationElement.slice(1))
+               await  getHTML(locationElement.slice(1))
                  
                  break;
              case '#/servicios':
-                 getHTML(locationElement.slice(1))
+                 await getHTML(locationElement.slice(1))
                  
                  break;
              case '#/nosotros':
-                 getHTML(locationElement.slice(1))
-                 
+                await  getHTML(locationElement.slice(1))
+                 await formContact();
                  break;
              case '#/contacto':
-                 getHTML(locationElement.slice(1))
+                await getHTML(locationElement.slice(1))
                  
                  break;
 
              default:
-                 getHTML('/error404');
+               await  getHTML('/error404');
                  break;
          }
   
