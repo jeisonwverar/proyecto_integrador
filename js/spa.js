@@ -42,6 +42,13 @@ const spa =async()=>{
      const router = async(route)=>{
      
          switch (route) {
+            case '#/':
+                await getHTML(locationElement.slice(1))
+                 //console.log(document.getElementsByClassName('main'))
+                  slider();
+                    break;
+            
+
              case '#/home':
              await getHTML(locationElement.slice(1))
               //console.log(document.getElementsByClassName('main'))
