@@ -1,0 +1,18 @@
+<%-include('./partials/header.ejs')%>
+<main>
+    <form action="/login" method="post" class="user-login">
+        <div class="user-login__container">
+            <label for="username">User</label>
+            <input type="text" id="username" name="username">
+        </div>
+        <div class="user-login__container">
+            <label for="password">Password</label>
+            <input type="text" id="password" name="password">
+        </div>
+        <div class="user-login__container">
+            <button type="submit" class="user-login__container-btn">Registrarse</button>
+            <a href="/login" class="user-login__container-cta">Ingresar</a>
+        </div>
+    </form>
+</main>
+<%-include('./partials/footer.ejs')%>

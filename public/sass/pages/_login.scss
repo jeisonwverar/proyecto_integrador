@@ -1,0 +1,58 @@
+.user-login{
+    width: 80%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    border-radius: 50px;
+background: #d2d1d2;
+box-shadow:  20px 20px 60px #b3b2b3,
+             -20px -20px 60px #f2f0f2;
+    margin: 4em;
+    gap:2em;
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        & label{
+            width: 80%;
+            text-align: center;
+            color: rgb(73, 56, 205);
+            font-size: 1.5em;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            text-shadow:20px 20px 60px #e82ae8,
+            -20px -20px 60px #cdb8cd;
+            margin-bottom: 0.5em;
+        }
+        & input{
+            width: 80%;
+            border: none;
+            padding: 0.8em;
+            text-align: center;
+            border-radius: 25px;
+            outline: none;
+            background: #d1d4d6;
+            box-shadow:   15px 15px 30px #b2b4b6,
+            -15px -15px 30px #f0f4f6;
+            
+
+        }
+        &-btn{
+            padding: 0.8em;
+            font-weight: bold;
+            border: none;
+            outline: none;
+            background: rgb(73, 56, 205);
+            box-shadow:   15px 15px 30px #b2b4b6,
+            -15px -15px 30px #f0f4f6;
+            color: #d1d4d6;
+            cursor: pointer;
+        }
+
+    }
+}
