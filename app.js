@@ -15,7 +15,8 @@ app.set('views',join(__dirname,'views'));
 app.set('view engine','ejs');
 //archivos estaticos
 app.use(Express.static(join(__dirname,'public')));
-
+app.use(Express.urlencoded({extended:false}));
+app.use(Express.json());
 
  //middleware
 app.use(Morgan('dev'));
