@@ -37,30 +37,31 @@ routerLogin.post('/new',(req,res)=>{
             res.status(500).send('Error al registrar al usuario')
         }else{
               res.status(200).send('registro completo')
-             res.redirect('/')
+             
             
         }
     });
 })
 
 routerLogin.post('/login',(req,res)=>{
-    console.log(req.body)
     const{username, password}=req.body;
-    User.findOne({username},(err,user)=>{
+    console.log(req.body)
+      User.findOne({username},(err,user)=>{
         if(err){
-            res.status(500).send('Error al registrar al usuario')
+            res.status(500).send('Error al ingresar usuario')
         }else if(!user){
             res.status(500).send('El usuario no exite')
         }else{
-            User.isCorrectPassword=(password,
-                (err,result)=>{
+           user.isCorrectPassword (password,(err,result)=>{
+                console.log( password === result)
+                console.log(result,err)
                 if(err){
-                    res.status(500).send('Error al autenticar')
-                }else if(!result){
-                    res.status(500).send('usuario o contraseña incorrecta')
+                   res.status(500).send('Error al autenticar');
+                }else if(result){
+                    res.status(200).res.send('usuario autenticado');
                     
                 }else{
-                    res.status(200).send('usuario correcto').redirect('/alta')
+                    res.status(500).send('usuario y/o contraseña incorrecta')
                 }
             });
         }

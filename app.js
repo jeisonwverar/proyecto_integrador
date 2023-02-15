@@ -5,7 +5,8 @@ import {fileURLToPath } from "url";
 const port=process.env.PORT||4040;
 import router from "./routes/index.js";
 import setupDB from "./utils/db.js";
-
+import cors from 'cors';
+import  methodOverride from 'method-override';
 
 //uso de dirname en ECMAScript 6
 const __dirname=dirname(fileURLToPath(import.meta.url));
@@ -23,6 +24,8 @@ app.use(Express.static(join(__dirname,'public')));
 
  //middleware
 app.use(Morgan('dev'));
+app.use(cors());
+app.use(methodOverride('_method'));
 //rutas
 app.use(router);
 

@@ -11,7 +11,7 @@ const userSchema =new mongoose.Schema(
     password:{type:String,require:true}
     },
    {
-    versionKey:false,
+    
     timestamps:true
 
    }
@@ -20,29 +20,29 @@ const userSchema =new mongoose.Schema(
 userSchema.pre('save',function(next){
     if(this.isNew||this.isModified('password')){
 
-        const document = this;
+        const doc = this;
 
-        bcrypt.hash(document.password,saltRounds,(err,hashedPassword)=>{
+         return bcrypt.hash(doc.password,saltRounds,(err,hashedPassword)=>{
             if(err){
-                next(err);
+              return  next(err);
             }else{
-                document.password = hashedPassword;
-                next();
+                doc.password = hashedPassword;
+              return  next();
             }
         });
     }else{
         next();
-    }
+    };
 });
-
-userSchema.method.isCorrectPassword = function(password,callback){
+userSchema.methods.isCorrectPassword = function(password,cb){
     bcrypt.compare(password,this.password,function(err,same){
         if(err){
-            callback(err);
-        }else{
-            callback(err,same);
+          return  cb(err);
         }
+           return cb(null,same);
+        
     });
 };
+
 
 export default mongoose.model('User',userSchema);
