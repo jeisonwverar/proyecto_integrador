@@ -1,6 +1,8 @@
 import  Express  from "express";
 const router= Express.Router();
 import routerLogin from "./login.routes.js";
+router.use(Express.json());
+router.use(Express.urlencoded({extended:false}));
 
 router.get('/',(req,res)=>{
     res.render('home',{
