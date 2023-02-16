@@ -33,7 +33,7 @@ productRouter.get('/dashboard',async (req,res)=>{
         await cloudinary.uploader.destroy(productId.cloudinary_id);
         //eliminar de mongo
         await productId.remove();
-        res.redirect('/');
+        res.redirect('/dashboard');
     }catch(err){console.log(err)}
 })
 

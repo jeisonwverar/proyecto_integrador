@@ -36,7 +36,7 @@ routerLogin.post('/new',(req,res)=>{
         if(err){
             res.status(500).send('Error al registrar al usuario')
         }else{
-              res.status(200).send('registro completo')
+              res.status(200).redirect('/registrook')
              
             
         }
@@ -58,7 +58,7 @@ routerLogin.post('/login',(req,res)=>{
                 if(err){
                    res.status(500).send('Error al autenticar');
                 }else if(result){
-                    res.status(200).res.send('usuario autenticado');
+                    res.status(200).redirect('/dashboard');
                     
                 }else{
                     res.status(500).send('usuario y/o contraseña incorrecta')

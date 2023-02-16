@@ -29,5 +29,7 @@
 @use '../sass/pages/form-registration';
 @use '../sass/pages/_error-404';
 @use'../sass/pages/login';
+@use'../sass/pages/dashboard';
+@use'../sass/pages/login-ok';
 //themes
 @use '../sass/themes/dark.scss'

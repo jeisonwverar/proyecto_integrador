@@ -1,7 +1,9 @@
 .main-login{
     display: flex;
     justify-content: center;
-    padding: 2em;
+    background-image: url('/img/galaxia.png');
+    object-fit: contain;
+    background-blend-mode: multiply,multiply;
 }
 
 .user-login{
@@ -11,9 +13,10 @@
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    background: #2c2b2c;
-    box-shadow:  20px 20px 60px #252525,
-                 -20px -20px 60px #333133;
+    background: rgba(255, 255, 255, .3);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 1.5px solid rgba(209, 213, 219, 0.3);
     margin: 4em;
     padding: 2em;
     gap:2em;
@@ -24,9 +27,9 @@
     }
 
     &__title{
-        color: #f0f4f6;
+        color: #213f4e;
         border-bottom: #050505 solid 3px;
-        width: 90%;
+        
         text-align: center;
         padding-bottom: 0.7em;
     }
@@ -37,15 +40,14 @@
         align-items: center;
         width: 80%;
         & label{
-            width: 80%;
+            
             text-align: center;
             color: rgb(73, 56, 205);
-            font-size: 1.5em;
+            font-size: 2em;
             font-family: 'Courier New', Courier, monospace;
-            font-weight: bold;
-            text-shadow:2px 2px 2px #141314,
-            -2px -2px 2px #353135;
+            font-weight: bold;       
             margin-bottom: 0.5em;
+
         }
         & input{
             width: 80%;
@@ -56,6 +58,10 @@
             outline: none;
             background-color: #b2b4b6;
             font-size: 1.2em;
+            @media(min-width:300px){
+                width:100%;
+                
+             }
 
 
         }
@@ -76,6 +82,11 @@
 
         &__cta{
             font-size: 2em;
+            padding: 0.5em;
+
+            &:active{
+                color: azure;
+            }
         }
 
 

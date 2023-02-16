@@ -19,12 +19,17 @@ router.get('/',async(req,res)=>{
     });
 });
 
+
+
 //formulario para agregar nuevo articulo
 router.get('/alta',(req,res)=>{
     res.render('alta',{
         title:'alta'
     })
 })
+
+
+
 //formulario para utilizar el metodo post
 router.post('/alta',upload.single('image'),async(req,res)=>{
     try{
@@ -34,6 +39,7 @@ router.post('/alta',upload.single('image'),async(req,res)=>{
         let products= new Product({
             name:req.body.name,
             brand:req.body.brand,
+            price:req.body.price,
             category:req.body.category,
             descriptionShort:req.body.descriptionShort,
             descriptionLong:req.body.descriptionLong,
@@ -59,6 +65,12 @@ router.get('/contacto',(req,res)=>{
 router.get('/nosotros',(req,res)=>{
     res.render('nosotros',{
         title:'nosotros'
+    })
+})
+
+router.get('/registrook',(req,res)=>{
+    res.render('registrook',{
+        title:'registrook'
     })
 })
 
