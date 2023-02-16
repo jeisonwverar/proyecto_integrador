@@ -20,13 +20,16 @@ app.set('view engine','ejs');
 //archivos estaticos
 app.use(Express.static(join(__dirname,'public')));
 
-
+app.use(Express.json());
+app.use(Express.urlencoded({extended:false}));
 
  //middleware
 app.use(Morgan('dev'));
 app.use(cors());
 app.use(methodOverride('_method'));
+
 //rutas
+
 app.use(router);
 
 

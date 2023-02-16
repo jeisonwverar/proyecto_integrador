@@ -1,7 +1,7 @@
 <%-include('./partials/header.ejs')%>
 <main class="form-registration" >
     <!-- Deberá contener un formulario con los siguientes campos: “nombre”, “precio”, “stock”, “marca”, “categoría”, “descripción corta”, “descripción larga”, “envío sin cargo”, “edad desde”, “edad hasta” y “foto”. -->
-    <form class="form-alta" action="/alta" method="POST"  enctype="multipart/form-data"">
+    <form class="form-alta" action="/alta" method="POST"  enctype="multipart/form-data">
         <section class="form-alta__section-one">
             <h2 class="form-alta__section-one--title">Producto</h2>
             <div class="form-alta__section-one--name">
@@ -32,12 +32,12 @@
         <section class="form-alta__section-two">
             <h2 class="form-alta__section-two--title">descripcion</h2>
             <div class="form-alta__section-two--short">
-                <label for="description-short">descripcion corta: <sup>*</sup></label>
-                <textarea name="description-short" id="description-short" cols="30" rows="10" minlength="2" maxlength="100" placeholder="descripcíon maxima de 100 caractéres"></textarea>
+                <label for="descriptionShort">descripcion corta: <sup>*</sup></label>
+                <textarea name="descriptionShort" id="descriptionShort" cols="30" rows="10" minlength="2" maxlength="100" placeholder="descripcíon maxima de 100 caractéres"></textarea>
             </div>
             <div class="form-alta__section-two--long">
-                <label for="description-long">descripcion larga: <sup>*</sup></label>
-                <textarea name="description-long" id="description-long" cols="30" rows="10" minlength="2" maxlength="350" placeholder="descripcíon maxima de 350 caractéres"></textarea>
+                <label for="descriptionLong">descripcion larga: <sup>*</sup></label>
+                <textarea name="descriptionLong" id="descriptionLong" cols="30" rows="10" minlength="2" maxlength="350" placeholder="descripcíon maxima de 350 caractéres"></textarea>
             </div>
             <div class="form-alta__section-two--price">
                 <label for="price">precio: <sup>*</sup></label>
@@ -45,10 +45,10 @@
             </div>
             <div class="form-alta__section-two--cost">
                 <p>Envío sin costo:<sup>*</sup></p>
-                <label for="cost">si:</label>
-                <input type="radio" id="cost-yes"  name="cost" required >
-                <label for="cost">no:</label>
-                <input type="radio" id="cost-no"  name="cost" required >
+                <label for="freeShipping">si:</label>
+                <input type="radio" id="cost-yes"  name="freeShipping" required value="true" >
+                <label for="freeShipping">no:</label>
+                <input type="radio" id="cost-no"  name="freeShipping" required  value="false">
             </div>
         </section>
         <input type="submit" class="form-alta__submit">

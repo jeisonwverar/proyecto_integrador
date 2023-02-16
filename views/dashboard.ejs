@@ -4,26 +4,30 @@
 <a href="/alta">Nuevo Producto <img src="/img/plus.svg" alt="plus" style="width: 1em;"></a>
 
 <div class="cards-container">
-    <% product.forEach((pro)=>{%> 
-    <div>
+   
+        
+    <% product.forEach(produ=>{ %> 
         <div class="card">
             <div class="card__action">
-                <a href="#" class="card__action-link">comprar</a>
                 <a href="#"class="card__action-info">mas información.</a>
             </div>
-        
             <article class="card__article">
                 <div class="card__image-container">
-                    <img src="<%= pro.image%>" alt="<%=product.cloudinary_id %>" class="card__image" height="200" width="250" >
+                    <img src="<%= produ.image &>" alt="<%=produ.cloudinary_id &>" class="card_image" height="200" width="250" >
                 </div>
                 <div class="card__content">
-                   <h2 class="card__content-heading"><%=pro.name%></h2>
-                   <p class="card__content-brand"><%=pro.brand%></p> 
-                   <p class="card__content-price">$<%=pro.price%></p> 
+                   <h2 class="card__content-heading"></h2>
+                   <p class="card__content-brand"></p> 
+                   <p class="card__content-price"> <%= produ.price &> </p> 
                 </div>
             </article>
-        </div>
-    </div>
-    <%})%>
+            <form action="/<%=produ.id%>?_method=DELETE" method="POST" > 
+                <button  type="submit" >eliminar</button>
+              </form>
+
+         </div>
+        <% })%>
+        
+   
 </div>
 <%-include('./partials/footer.ejs')%>

@@ -26,14 +26,13 @@ const productSchema = new mongoose.Schema({
         type:String
     },
     freeShipping:{
-        type:Boolean
+        type:String
     },
     age:{
         type:String
     },
      price:{
-         type:Number,
-         
+         type:Number      
      },
      image:{
          type:String

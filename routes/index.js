@@ -5,21 +5,27 @@ import Product from '../models/product.models.js';
 import productRouter from "./products.routes.js";
 import cloudinary from '../utils/cloudinary.js';
 import upload from '../utils/multer.js';
-import  path  from "path";
-router.use(Express.json());
+
+router.use(Express.json('application/json'));
 router.use(Express.urlencoded({extended:false}));
 
-router.get('/',(req,res)=>{
-    res.render('home',{
+router.get('/',async(req,res)=>{
+    const products = await Product.find().sort({
+        createAt:'desc'})
+
+     await res.render('home',{
         title:'home',
-        product: new Product(),
-    })
-})
+        product: products
+    });
+});
+
+//formulario para agregar nuevo articulo
 router.get('/alta',(req,res)=>{
     res.render('alta',{
         title:'alta'
     })
 })
+//formulario para utilizar el metodo post
 router.post('/alta',upload.single('image'),async(req,res)=>{
     try{
         //subir la imagen a cloudinary
@@ -27,7 +33,11 @@ router.post('/alta',upload.single('image'),async(req,res)=>{
         //crear Nuevo articulo
         let products= new Product({
             name:req.body.name,
+            brand:req.body.brand,
+            category:req.body.category,
             descriptionShort:req.body.descriptionShort,
+            descriptionLong:req.body.descriptionLong,
+            freeShipping:req.body.freeShipping,
             markdown:req.body.markdown,
             image:imgCloudinary.secure_url,
             cloudinary_id:imgCloudinary.public_id,
